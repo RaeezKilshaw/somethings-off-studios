@@ -56,7 +56,7 @@ export default function SiteShell() {
       />
 
       {/* Wordmark — full-width white bar on mobile (prevents scroll bleed), transparent on desktop */}
-      <div className="absolute top-0 left-0 right-0 lg:right-auto lg:top-36 lg:left-10 pointer-events-auto bg-white lg:bg-transparent px-6 pt-6 pb-4 lg:p-0">
+      <div className="absolute top-0 left-0 right-0 lg:right-auto lg:top-28 lg:left-10 pointer-events-auto bg-white lg:bg-transparent px-6 pt-6 pb-4 lg:p-0">
         <Link
           href="/"
           onClick={() => setMenuOpen(false)}
@@ -66,8 +66,8 @@ export default function SiteShell() {
             transition: 'opacity 0.15s ease',
           }}
         >
-          <span className="block text-4xl lg:text-7xl font-bold leading-tight">Somethings</span>
-          <span className="block text-4xl lg:text-7xl font-bold leading-tight">Off</span>
+          <span className="block text-4xl lg:text-6xl font-bold leading-tight">Somethings</span>
+          <span className="block text-4xl lg:text-6xl font-bold leading-tight">Off</span>
         </Link>
 
         {/* Nav links — appear in wordmark position when menu open */}
