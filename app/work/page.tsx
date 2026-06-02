@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function WorkPage() {
   return (
-    <div className="min-h-screen px-6 lg:pl-[38%] lg:pr-8 pt-28 lg:pt-20 pb-16">
+    <div className="min-h-screen px-6 lg:pl-[38%] lg:pr-8 pt-40 lg:pt-20 pb-16">
       <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
         {projects.map((project) => (
           <Link

@@ -10,7 +10,7 @@ export default function TwoColumnPage({ children, imageSrc, imageAlt }: Props) {
   return (
     <div className="flex flex-col lg:flex-row min-h-screen">
       {/* Left column — content */}
-      <div className="w-full lg:w-[38%] lg:shrink-0 px-6 pt-28 lg:pt-20 pb-8 lg:pb-16 flex flex-col">
+      <div className="w-full lg:w-[38%] lg:shrink-0 px-6 pt-40 lg:pt-20 pb-8 lg:pb-16 flex flex-col">
         {children}
       </div>
 

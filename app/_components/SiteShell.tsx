@@ -40,6 +40,15 @@ export default function SiteShell() {
   return (
     <div className="fixed inset-0 pointer-events-none z-50">
 
+      {/* Click-outside overlay — closes menu when clicking outside the nav panel */}
+      {menuOpen && (
+        <div
+          className="absolute inset-0 pointer-events-auto"
+          onClick={() => setMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
       {/* White backdrop — full screen on mobile, left column on desktop */}
       <div
         className="absolute inset-y-0 left-0 w-full lg:w-[38%] bg-white transition-opacity duration-200"
@@ -47,7 +56,7 @@ export default function SiteShell() {
       />
 
       {/* Wordmark — full-width white bar on mobile (prevents scroll bleed), transparent on desktop */}
-      <div className="absolute top-0 left-0 right-0 lg:right-auto lg:top-6 lg:left-6 pointer-events-auto bg-white lg:bg-transparent px-6 pt-6 pb-4 lg:p-0">
+      <div className="absolute top-0 left-0 right-0 lg:right-auto lg:top-36 lg:left-10 pointer-events-auto bg-white lg:bg-transparent px-6 pt-6 pb-4 lg:p-0">
         <Link
           href="/"
           onClick={() => setMenuOpen(false)}
@@ -55,11 +64,10 @@ export default function SiteShell() {
           style={{
             opacity: menuOpen ? 0 : 1,
             transition: 'opacity 0.15s ease',
-            fontFamily: 'var(--font-space-grotesk)',
           }}
         >
-          <span className="block text-2xl font-bold leading-tight">Somethings</span>
-          <span className="block text-2xl font-bold leading-tight">Off</span>
+          <span className="block text-4xl lg:text-7xl font-bold leading-tight">Somethings</span>
+          <span className="block text-4xl lg:text-7xl font-bold leading-tight">Off</span>
         </Link>
 
         {/* Nav links — appear in wordmark position when menu open */}
@@ -70,7 +78,6 @@ export default function SiteShell() {
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
                 className={`fade-up fade-up-delay-${i + 1} text-left text-sm font-normal leading-relaxed hover:opacity-50 transition-opacity cursor-pointer bg-transparent border-0 p-0`}
-                style={{ fontFamily: 'var(--font-space-grotesk)' }}
               >
                 {link.label}
               </button>
@@ -96,7 +103,6 @@ export default function SiteShell() {
         style={{
           transform: menuOpen ? 'rotate(45deg)' : 'rotate(0deg)',
           transition: 'transform 0.2s ease',
-          fontFamily: 'var(--font-space-grotesk)',
         }}
         aria-label={menuOpen ? 'Close menu' : 'Open menu'}
       >

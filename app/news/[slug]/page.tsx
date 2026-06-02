@@ -23,7 +23,7 @@ export default async function NewsArticlePage({ params }: PageProps) {
   if (!post) notFound()
 
   return (
-    <div className="min-h-screen px-6 lg:pl-[38%] lg:pr-8 pt-28 lg:pt-20 pb-16 max-w-4xl">
+    <div className="min-h-screen px-6 lg:pl-[38%] lg:pr-8 pt-40 lg:pt-20 pb-16 max-w-4xl">
       <Link
         href="/news"
         className="text-xs tracking-wide uppercase mb-10 block hover:opacity-50 transition-opacity"
