@@ -4,10 +4,7 @@ import { useState } from 'react'
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error'
 
-// Replace YOUR_FORM_ID with your Formspree form ID from formspree.io
-const FORMSPREE_ID = 'YOUR_FORM_ID'
-
-export default function ContactForm() {
+export default function ContactForm({ formspreeId }: { formspreeId: string }) {
   const [state, setState] = useState<FormState>('idle')
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -18,7 +15,7 @@ export default function ContactForm() {
     const data = new FormData(form)
 
     try {
-      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
         method: 'POST',
         body: data,
         headers: { Accept: 'application/json' },

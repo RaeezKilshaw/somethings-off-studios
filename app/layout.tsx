@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import SiteShell from "@/app/_components/SiteShell";
-
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -22,8 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceGrotesk.variable} h-full`}>
       <body className="min-h-full bg-[var(--color-bg)] text-[var(--color-text)]" style={{ fontFamily: "var(--font-space-grotesk)" }}>
-        <SiteShell />
-        <main>{children}</main>
+        {children}
       </body>
     </html>
   );
