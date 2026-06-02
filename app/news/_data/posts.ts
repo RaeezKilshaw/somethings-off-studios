@@ -15,7 +15,7 @@ export const posts: Post[] = [
     type: 'Press',
     date: 'June 2025',
     excerpt: 'Somethings Off Studio is featured in the June issue of Open Metaphors Magazine.',
-    imageSrc: '/images/work-1.jpg',
+    imageSrc: '/images/home.jpg',
     content: `Somethings Off Studio was recently featured in Open Metaphors Magazine's June issue, exploring how restraint and refusal can be a design strategy in themselves. The piece covers three recent projects and the studio's approach to working with clients who understand that the right answer is often doing less.`,
   },
   {
@@ -24,7 +24,7 @@ export const posts: Post[] = [
     type: 'Finalist',
     date: 'May 2025',
     excerpt: 'Selected as a finalist in the 2025 Design Awards, Brand Identity category.',
-    imageSrc: '/images/work-2.jpg',
+    imageSrc: '/images/contact.jpg',
     content: `The studio has been selected as a finalist in the 2025 Design Awards in the Brand Identity category for our work on the Orbital visual identity system. The awards ceremony takes place in August 2025.`,
   },
   {

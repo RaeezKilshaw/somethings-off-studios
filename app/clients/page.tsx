@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function ClientsPage() {
   return (
-    <div className="min-h-screen pl-[38%] pr-8 pt-20 pb-16">
-      <div className="grid grid-cols-3 gap-6">
+    <div className="min-h-screen px-6 lg:pl-[38%] lg:pr-8 pt-20 pb-16">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
         {clients.map((client) => (
           <Link
             key={client.slug}

@@ -13,14 +13,14 @@ export const clients: Client[] = [
     name: 'Orbital Technologies',
     industry: 'Consumer Tech',
     description: 'A Cape Town-based hardware company designing tools for creative professionals.',
-    imageSrc: '/images/work-1.jpg',
+    imageSrc: '/images/home.jpg',
   },
   {
     slug: 'meridian-architecture',
     name: 'Meridian Architecture',
     industry: 'Architecture',
     description: 'An international architecture and urbanism practice with studios in Johannesburg and London.',
-    imageSrc: '/images/work-2.jpg',
+    imageSrc: '/images/contact.jpg',
   },
   {
     slug: 'haven-wellness',

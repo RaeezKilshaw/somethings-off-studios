@@ -24,9 +24,9 @@ export default function SiteShell() {
   return (
     <div className="fixed inset-0 pointer-events-none z-50">
 
-      {/* White backdrop — covers left column when menu is open */}
+      {/* White backdrop — full screen on mobile, left column on desktop */}
       <div
-        className="absolute inset-y-0 left-0 w-[38%] bg-white transition-opacity duration-200"
+        className="absolute inset-y-0 left-0 w-full lg:w-[38%] bg-white transition-opacity duration-200"
         style={{ opacity: menuOpen ? 1 : 0 }}
       />
 

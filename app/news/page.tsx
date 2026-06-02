@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function NewsPage() {
   return (
-    <div className="min-h-screen pl-[38%] pr-8 pt-20 pb-16">
-      <div className="columns-2 gap-10">
+    <div className="min-h-screen px-6 lg:pl-[38%] lg:pr-8 pt-20 pb-16">
+      <div className="columns-1 lg:columns-2 gap-10">
         {posts.map((post) => (
           <Link
             key={post.slug}

@@ -17,7 +17,7 @@ export const projects: Project[] = [
     category: 'Brand Identity',
     year: '2025',
     description: 'A complete visual identity system for an emerging consumer tech brand — mark, typography, and motion language.',
-    imageSrc: '/images/work-1.jpg',
+    imageSrc: '/images/home.jpg',
   },
   {
     slug: 'meridian',
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     category: 'Web',
     year: '2025',
     description: 'Digital presence for a global architecture practice. Editorial, image-first, deliberately slow.',
-    imageSrc: '/images/work-2.jpg',
+    imageSrc: '/images/contact.jpg',
   },
   {
     slug: 'haven',
