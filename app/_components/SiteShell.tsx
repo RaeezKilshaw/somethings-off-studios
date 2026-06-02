@@ -30,8 +30,8 @@ export default function SiteShell() {
         style={{ opacity: menuOpen ? 1 : 0 }}
       />
 
-      {/* Wordmark — top left */}
-      <div className="absolute top-6 left-6 pointer-events-auto">
+      {/* Wordmark — full-width white bar on mobile (prevents scroll bleed), transparent on desktop */}
+      <div className="absolute top-0 left-0 right-0 lg:right-auto lg:top-6 lg:left-6 pointer-events-auto bg-white lg:bg-transparent px-6 pt-6 pb-4 lg:p-0">
         <Link
           href="/"
           onClick={() => setMenuOpen(false)}
