@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <TwoColumnPage imageSrc="/images/about.jpg" imageAlt="Somethings Off Studio">
+    <TwoColumnPage imageSrc="/assets/images/about.jpg" imageAlt="Somethings Off Studio">
       <div className="flex flex-col gap-6 pt-2">
         <p className="text-sm leading-relaxed">
           Somethings Off Studio is a digital design practice focused on brand identity, web, and motion.

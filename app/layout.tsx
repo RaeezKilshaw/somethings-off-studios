@@ -12,6 +12,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Somethings Off Studio",
   description: "A digital design studio.",
+  icons: { icon: '/assets/icons/favicon.svg' },
 };
 
 export default function RootLayout({

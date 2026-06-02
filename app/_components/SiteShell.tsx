@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const navLinks = [
   { href: '/work', label: 'Work' },
@@ -14,7 +14,23 @@ const navLinks = [
 
 export default function SiteShell() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [time, setTime] = useState('')
   const router = useRouter()
+
+  useEffect(() => {
+    function tick() {
+      setTime(new Date().toLocaleTimeString('en-ZA', {
+        timeZone: 'Africa/Johannesburg',
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      }))
+    }
+    tick()
+    const id = setInterval(tick, 1000)
+    return () => clearInterval(id)
+  }, [])
 
   function handleNavClick(href: string) {
     setMenuOpen(false)
@@ -62,6 +78,16 @@ export default function SiteShell() {
           </nav>
         )}
       </div>
+
+      {/* Live clock — bottom right, SAST */}
+      {time && (
+        <div
+          className="absolute bottom-6 right-6 text-xs tabular-nums pointer-events-none"
+          style={{ color: 'var(--color-muted)' }}
+        >
+          {time}
+        </div>
+      )}
 
       {/* Menu toggle — bottom left */}
       <button

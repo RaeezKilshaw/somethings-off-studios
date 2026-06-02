@@ -3,7 +3,7 @@ import TwoColumnPage from '@/app/_components/TwoColumnPage'
 
 export default function NotFound() {
   return (
-    <TwoColumnPage imageSrc="/images/home.jpg" imageAlt="Page not found">
+    <TwoColumnPage imageSrc="/assets/images/home.jpg" imageAlt="Page not found">
       <div className="flex flex-col gap-4 pt-2">
         <p className="text-xs" style={{ color: 'var(--color-muted)' }}>404</p>
         <p className="text-sm">Page not found.</p>

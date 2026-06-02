@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <TwoColumnPage imageSrc="/images/contact.jpg" imageAlt="Contact Somethings Off Studio">
+    <TwoColumnPage imageSrc="/assets/images/contact.jpg" imageAlt="Contact Somethings Off Studio">
       <div className="flex flex-col gap-8 pt-2">
         {/* Links */}
         <div className="flex flex-col gap-2">
