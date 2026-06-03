@@ -12,8 +12,9 @@ const neueHaasGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Somethings Off Studio",
+  title: "Somethings Off",
   description: "A digital design studio.",
+  icons: { icon: '/assets/icons/favicon.svg' },
 };
 
 export default function RootLayout({
