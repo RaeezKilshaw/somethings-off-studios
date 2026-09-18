@@ -6,8 +6,6 @@ import { useState, useEffect } from 'react'
 
 const navLinks = [
   { href: '/work', label: 'Work' },
-  { href: '/clients', label: 'Clients' },
-  { href: '/news', label: 'News' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ]
@@ -55,8 +53,8 @@ export default function SiteShell() {
         style={{ opacity: menuOpen ? 1 : 0 }}
       />
 
-      {/* Wordmark — full-width white bar on mobile (prevents scroll bleed), transparent on desktop */}
-      <div className="absolute top-0 left-0 right-0 lg:right-auto lg:top-28 lg:left-10 pointer-events-auto bg-white lg:bg-transparent px-6 pt-6 pb-4 lg:p-0">
+      {/* Logo — full-width white bar on mobile (prevents scroll bleed), transparent on desktop */}
+      <div className="absolute top-0 left-0 right-0 lg:right-auto pointer-events-auto bg-white lg:bg-transparent px-4 py-3 lg:p-6">
         <Link
           href="/"
           onClick={() => setMenuOpen(false)}
@@ -66,25 +64,28 @@ export default function SiteShell() {
             transition: 'opacity 0.15s ease',
           }}
         >
-          <span className="block text-4xl lg:text-6xl font-bold leading-tight">Somethings</span>
-          <span className="block text-4xl lg:text-6xl font-bold leading-tight">Off</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/assets/icons/asset-1.svg" alt="Somethings Off Studio" className="h-16 lg:h-20 w-auto" />
         </Link>
-
-        {/* Nav links — appear in wordmark position when menu open */}
-        {menuOpen && (
-          <nav className="flex flex-col gap-0.5" aria-label="Site navigation">
-            {navLinks.map((link, i) => (
-              <button
-                key={link.href}
-                onClick={() => handleNavClick(link.href)}
-                className={`fade-up fade-up-delay-${i + 1} text-left text-sm font-normal leading-relaxed hover:opacity-50 transition-opacity cursor-pointer bg-transparent border-0 p-0`}
-              >
-                {link.label}
-              </button>
-            ))}
-          </nav>
-        )}
       </div>
+
+      {/* Nav links — upper portion of the white panel when menu open */}
+      {menuOpen && (
+        <nav
+          className="absolute inset-y-0 left-0 w-full lg:w-[38%] flex flex-col items-start justify-start pt-40 lg:pt-56 gap-0.5 px-6 lg:px-10 pointer-events-none"
+          aria-label="Site navigation"
+        >
+          {navLinks.map((link, i) => (
+            <button
+              key={link.href}
+              onClick={() => handleNavClick(link.href)}
+              className={`fade-up fade-up-delay-${i + 1} text-left text-sm font-normal leading-relaxed hover:opacity-50 transition-opacity cursor-pointer bg-transparent border-0 p-0 pointer-events-auto`}
+            >
+              {link.label}
+            </button>
+          ))}
+        </nav>
+      )}
 
       {/* Live clock — bottom right, SAST */}
       {time && (

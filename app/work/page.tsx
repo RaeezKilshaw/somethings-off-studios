@@ -21,8 +21,8 @@ export default function WorkPage() {
               <Image
                 src={project.imageSrc}
                 alt={project.title}
-                width={600}
-                height={400}
+                width={project.imageWidth}
+                height={project.imageHeight}
                 className="w-full h-auto object-cover group-hover:opacity-90 transition-opacity"
                 sizes="33vw"
               />

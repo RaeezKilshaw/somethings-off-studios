@@ -22,7 +22,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
   if (!project) notFound()
 
   return (
-    <TwoColumnPage imageSrc={project.imageSrc} imageAlt={project.title}>
+    <TwoColumnPage imageSrc={project.imageSrc} imageAlt={project.title} images={project.images}>
       <div className="flex flex-col gap-8">
         <div>
           <p className="text-xs mb-1" style={{ color: 'var(--color-muted)' }}>
