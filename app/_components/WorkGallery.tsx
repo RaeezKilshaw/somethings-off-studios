@@ -9,15 +9,16 @@ type Props = {
 
 export default function WorkGallery({ children, gallery, alt }: Props) {
   return (
-    <div className="flex flex-col lg:flex-row lg:h-screen lg:overflow-hidden">
-      {/* Left column — text, stays put while the gallery scrolls */}
-      <div className="w-full lg:w-[38%] lg:shrink-0 px-6 pt-40 lg:pt-72 pb-8 lg:pb-16 flex flex-col">
+    <div className="flex flex-col lg:flex-row">
+      {/* Left column — text. Sticky (not a nested scroll container) so the page
+          scrolls normally from anywhere, same as every other page. */}
+      <div className="w-full lg:w-[38%] lg:shrink-0 px-6 pt-40 lg:pt-72 pb-8 lg:pb-16 flex flex-col lg:sticky lg:top-0 lg:h-screen">
         {children}
       </div>
 
-      {/* Right column — full gallery, scrolls independently of the text. Each image keeps
+      {/* Right column — full gallery, flows in normal document order. Each image keeps
           the same inset/whitespace treatment the single-image layout used. */}
-      <div className="flex-1 lg:h-screen lg:overflow-y-auto">
+      <div className="flex-1">
         {gallery.map((image, i) => (
           <div
             key={image.src}

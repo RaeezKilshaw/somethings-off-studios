@@ -9,17 +9,17 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <TwoColumnPage imageSrc="/assets/images/contact.jpg" imageAlt="Contact Somethings Off Studio">
-      <div className="flex flex-col gap-8 pt-2">
+      <div className="flex flex-col gap-8 pt-2 -mt-12 lg:-mt-28">
         {/* Links */}
         <div className="flex flex-col gap-2">
           <a
-            href="mailto:hello@somethingsoffstudio.com"
+            href="mailto:idrisnoordien18@gmail.com"
             className="text-sm hover:opacity-50 transition-opacity"
           >
-            hello@somethingsoffstudio.com
+            idrisnoordien18@gmail.com
           </a>
           <a
-            href="https://instagram.com/somethingsoffstudio"
+            href="https://www.instagram.com/the_neuestudio"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm hover:opacity-50 transition-opacity"
@@ -28,13 +28,22 @@ export default function ContactPage() {
             Instagram ↗
           </a>
           <a
-            href="https://linkedin.com/company/somethingsoffstudio"
+            href="https://www.behance.net/idrisnoordien"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm hover:opacity-50 transition-opacity"
             style={{ color: 'var(--color-muted)' }}
           >
-            LinkedIn ↗
+            Behance ↗
+          </a>
+          <a
+            href="https://dribbble.com/IdrisNoordien"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm hover:opacity-50 transition-opacity"
+            style={{ color: 'var(--color-muted)' }}
+          >
+            Dribbble ↗
           </a>
         </div>
 

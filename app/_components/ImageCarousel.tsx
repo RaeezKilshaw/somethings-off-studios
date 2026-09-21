@@ -12,6 +12,7 @@ type Props = {
 
 export default function ImageCarousel({ images, alt, randomStart = false }: Props) {
   const [index, setIndex] = useState(0)
+  const [hoveringImage, setHoveringImage] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -25,11 +26,11 @@ export default function ImageCarousel({ images, alt, randomStart = false }: Prop
     setIndex((i) => (i + 1) % images.length)
   }
 
-  // object-contain can letterbox within this box — only advance when the
-  // click actually lands on the visible picture, not the empty margin.
-  function handleClick(e: React.MouseEvent<HTMLDivElement>) {
+  // object-contain can letterbox within this box — the visible picture's rendered
+  // rect (not the full box) is what should drive both the cursor and the click.
+  function isOnImage(e: { clientX: number; clientY: number }) {
     const el = containerRef.current
-    if (!el) return
+    if (!el) return false
 
     const rect = el.getBoundingClientRect()
     const current = images[index]
@@ -41,12 +42,17 @@ export default function ImageCarousel({ images, alt, randomStart = false }: Prop
     const marginX = (rect.width - contentWidth) / 2
     const marginY = (rect.height - contentHeight) / 2
 
-    const clickX = e.clientX - rect.left
-    const clickY = e.clientY - rect.top
-    const onImage =
-      clickX >= marginX && clickX <= rect.width - marginX && clickY >= marginY && clickY <= rect.height - marginY
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+    return x >= marginX && x <= rect.width - marginX && y >= marginY && y <= rect.height - marginY
+  }
 
-    if (onImage) advance()
+  function handleClick(e: React.MouseEvent<HTMLDivElement>) {
+    if (isOnImage(e)) advance()
+  }
+
+  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+    setHoveringImage(isOnImage(e))
   }
 
   const current = images[index]
@@ -55,12 +61,14 @@ export default function ImageCarousel({ images, alt, randomStart = false }: Prop
     <div
       ref={containerRef}
       onClick={handleClick}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={() => setHoveringImage(false)}
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') advance()
       }}
-      className="relative w-full h-full cursor-pointer"
+      className={`relative w-full h-full ${hoveringImage ? 'cursor-pointer' : 'cursor-default'}`}
       aria-label="Show next image"
     >
       <Image

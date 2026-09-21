@@ -18,6 +18,9 @@ export type Project = {
   layout?: 'scroll' | 'carousel'
 }
 
+// Order here drives the grid layout (app/work/page.tsx uses a CSS multi-column
+// masonry, which fills column-by-column) — deliberately alternates portrait/
+// square/landscape covers so neighbouring tiles don't share the same shape.
 export const projects: Project[] = [
   {
     slug: 'sos',
@@ -52,18 +55,41 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'auntie-simas-biltong',
-    title: "Auntie Sima's Biltong",
-    client: "Auntie Sima's Biltong",
+    slug: 'velo-coffee-club',
+    title: 'Velo Coffee Club',
+    client: 'Velo Coffee Club',
     category: 'Brand Identity',
-    year: '2024',
-    description: 'Hand-lettered wordmark and packaging illustration for an artisanal Cape Town biltong brand.',
-    cover: { src: '/assets/images/work/auntie-simas-biltong/cover.jpg', width: 750, height: 750 },
+    year: '2025',
+    description: 'A hand-drawn wordmark and launch-event campaign for a new coffee spot in Plumstead, Cape Town.',
+    cover: { src: '/assets/images/work/velo-coffee-club/cover.jpg', width: 750, height: 595 },
     gallery: [
-      { src: '/assets/images/work/auntie-simas-biltong/cover.jpg', width: 750, height: 750 },
-      { src: '/assets/images/work/auntie-simas-biltong/01.jpg', width: 750, height: 1124 },
-      { src: '/assets/images/work/auntie-simas-biltong/02.jpg', width: 750, height: 595 },
-      { src: '/assets/images/work/auntie-simas-biltong/03.jpg', width: 750, height: 1124 },
+      { src: '/assets/images/work/velo-coffee-club/cover.jpg', width: 750, height: 595 },
+      { src: '/assets/images/work/velo-coffee-club/01.jpg', width: 750, height: 1124 },
+      { src: '/assets/images/work/velo-coffee-club/02.jpg', width: 750, height: 595 },
+      { src: '/assets/images/work/velo-coffee-club/03.jpg', width: 750, height: 1124 },
+      { src: '/assets/images/work/velo-coffee-club/04.jpg', width: 750, height: 750 },
+      { src: '/assets/images/work/velo-coffee-club/05.jpg', width: 750, height: 595 },
+      { src: '/assets/images/work/velo-coffee-club/06.jpg', width: 750, height: 1124 },
+    ],
+  },
+  {
+    slug: 'sealand',
+    title: 'Sealand',
+    client: 'Sealand',
+    category: 'Brand Identity',
+    year: '2025',
+    description: 'Illustrated botanical mark and surf-inspired identity for the Sealand "Familia" line, applied across totes and boards.',
+    cover: { src: '/assets/images/work/sealand/cover.jpg', width: 750, height: 595 },
+    gallery: [
+      { src: '/assets/images/work/sealand/cover.jpg', width: 750, height: 595 },
+      { src: '/assets/images/work/sealand/01.jpg', width: 750, height: 595 },
+      { src: '/assets/images/work/sealand/02.jpg', width: 750, height: 1124 },
+      { src: '/assets/images/work/sealand/03.jpg', width: 750, height: 1124 },
+      { src: '/assets/images/work/sealand/04.jpg', width: 750, height: 595 },
+      { src: '/assets/images/work/sealand/05.jpg', width: 750, height: 595 },
+      { src: '/assets/images/work/sealand/06.jpg', width: 750, height: 595 },
+      { src: '/assets/images/work/sealand/07.jpg', width: 750, height: 595 },
+      { src: '/assets/images/work/sealand/08.jpg', width: 750, height: 595 },
     ],
   },
   {
@@ -84,13 +110,27 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: 'auntie-simas-biltong',
+    title: "Auntie Sima's Biltong",
+    client: "Auntie Sima's Biltong",
+    category: 'Brand Identity',
+    year: '2024',
+    description: 'Hand-lettered wordmark and packaging illustration for an artisanal Cape Town biltong brand.',
+    cover: { src: '/assets/images/work/auntie-simas-biltong/cover.jpg', width: 750, height: 750 },
+    gallery: [
+      { src: '/assets/images/work/auntie-simas-biltong/cover.jpg', width: 750, height: 750 },
+      { src: '/assets/images/work/auntie-simas-biltong/01.jpg', width: 750, height: 1124 },
+      { src: '/assets/images/work/auntie-simas-biltong/02.jpg', width: 750, height: 595 },
+      { src: '/assets/images/work/auntie-simas-biltong/03.jpg', width: 750, height: 1124 },
+    ],
+  },
+  {
     slug: 'left-overs-in-abu-dhabi',
     title: 'Left Overs in Abu Dhabi',
     client: 'Self-initiated',
     category: 'Art Direction',
     year: '2025',
     description: 'A self-published photo zine documenting the overlooked corners of Abu Dhabi.',
-    layout: 'carousel',
     cover: { src: '/assets/images/work/abu-dhabi-zine/cover.jpg', width: 750, height: 1124 },
     gallery: [
       { src: '/assets/images/work/abu-dhabi-zine/cover.jpg', width: 750, height: 1124 },
@@ -105,13 +145,32 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'velo-coffee-club',
-    title: 'Velo Coffee Club',
-    client: 'Velo Coffee Club',
+    slug: 'sealand-crew',
+    title: 'Sealand Crew',
+    client: 'Sealand',
     category: 'Brand Identity',
     year: '2025',
-    description: 'A playful, hand-drawn wordmark for a coffee brand, set against warm, textural photography.',
-    cover: { src: '/assets/images/work/velo-coffee-club.jpg', width: 751, height: 596 },
-    gallery: [{ src: '/assets/images/work/velo-coffee-club.jpg', width: 751, height: 596 }],
+    description: 'Apparel line-extension for Sealand — a hand-drawn embrace mark and merch mockups.',
+    cover: { src: '/assets/images/work/sealand-crew/cover.jpg', width: 750, height: 595 },
+    gallery: [
+      { src: '/assets/images/work/sealand-crew/cover.jpg', width: 750, height: 595 },
+      { src: '/assets/images/work/sealand-crew/01.jpg', width: 750, height: 595 },
+      { src: '/assets/images/work/sealand-crew/02.jpg', width: 750, height: 595 },
+    ],
+  },
+  {
+    slug: 'runna',
+    title: 'RUNA',
+    client: 'RUNA Social Running Club',
+    category: 'Brand Identity',
+    year: '2025',
+    description: 'Identity and campaign poster series for a Cape Town / Johannesburg social running club — a running wordmark and a set of stark, high-contrast editorial posters.',
+    cover: { src: '/assets/images/work/runna/cover.jpg', width: 750, height: 1061 },
+    gallery: [
+      { src: '/assets/images/work/runna/cover.jpg', width: 750, height: 1061 },
+      { src: '/assets/images/work/runna/01.jpg', width: 750, height: 1061 },
+      { src: '/assets/images/work/runna/02.jpg', width: 750, height: 595 },
+      { src: '/assets/images/work/runna/03.jpg', width: 750, height: 595 },
+    ],
   },
 ]

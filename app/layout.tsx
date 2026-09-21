@@ -3,16 +3,11 @@ import localFont from "next/font/local";
 import "./globals.css";
 import SiteShell from "@/app/_components/SiteShell";
 
-const neueHaasGrotesk = localFont({
+const facultyGlyphic = localFont({
   src: [
-    { path: "../public/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRoman.ttf",        weight: "400", style: "normal" },
-    { path: "../public/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRomanItalic.ttf",  weight: "400", style: "italic" },
-    { path: "../public/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediu.ttf",        weight: "500", style: "normal" },
-    { path: "../public/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediumItalic.ttf", weight: "500", style: "italic" },
-    { path: "../public/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBold.ttf",         weight: "700", style: "normal" },
-    { path: "../public/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBoldItalic.ttf",   weight: "700", style: "italic" },
+    { path: "../public/assets/fonts/faculty-glyphic/FacultyGlyphic-Regular.ttf", weight: "400", style: "normal" },
   ],
-  variable: "--font-neue-haas",
+  variable: "--font-faculty-glyphic",
 });
 
 export const metadata: Metadata = {
@@ -27,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${neueHaasGrotesk.variable} h-full`}>
-      <body className="min-h-full bg-[var(--color-bg)] text-[var(--color-text)]" style={{ fontFamily: "var(--font-neue-haas)" }}>
+    <html lang="en" className={`${facultyGlyphic.variable} h-full`}>
+      <body className="min-h-full bg-[var(--color-bg)] text-[var(--color-text)]" style={{ fontFamily: "var(--font-faculty-glyphic)" }}>
         <SiteShell />
         <main>{children}</main>
       </body>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import WorkGallery from '@/app/_components/WorkGallery'
 import TwoColumnPage from '@/app/_components/TwoColumnPage'
@@ -24,6 +25,18 @@ export default async function WorkDetailPage({ params }: PageProps) {
 
   const textBlock = (
     <div className="flex flex-col gap-8">
+      <Link href="/work" className="w-fit hover:opacity-50 transition-opacity" aria-label="Back to Work">
+        <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M21 6H1M1 6L7 1M1 6L7 11"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </Link>
+
       <div>
         <p className="text-xs mb-1" style={{ color: 'var(--color-muted)' }}>
           {project.category} — {project.year}
