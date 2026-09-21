@@ -1,14 +1,16 @@
 import Image from 'next/image'
 import ImageCarousel from './ImageCarousel'
+import type { WorkImage } from '@/app/work/_data/projects'
 
 type Props = {
   children: React.ReactNode
   imageSrc: string
   imageAlt: string
-  images?: string[]
+  images?: WorkImage[]
+  randomStart?: boolean
 }
 
-export default function TwoColumnPage({ children, imageSrc, imageAlt, images }: Props) {
+export default function TwoColumnPage({ children, imageSrc, imageAlt, images, randomStart }: Props) {
   const isCarousel = Boolean(images && images.length > 1)
 
   return (
@@ -23,7 +25,7 @@ export default function TwoColumnPage({ children, imageSrc, imageAlt, images }: 
         className={`flex-1 flex items-center justify-center px-6 pb-16 lg:p-10 ${isCarousel ? 'min-h-0' : 'min-h-[50vh] lg:min-h-0'}`}
       >
         {isCarousel ? (
-          <ImageCarousel images={images as string[]} alt={imageAlt} />
+          <ImageCarousel images={images as WorkImage[]} alt={imageAlt} randomStart={randomStart} />
         ) : (
           <div className="relative w-full h-full min-h-[50vh] lg:min-h-0">
             <Image

@@ -19,10 +19,10 @@ export default function WorkPage() {
           >
             <div className="relative overflow-hidden">
               <Image
-                src={project.imageSrc}
+                src={project.cover.src}
                 alt={project.title}
-                width={project.imageWidth}
-                height={project.imageHeight}
+                width={project.cover.width}
+                height={project.cover.height}
                 className="w-full h-auto object-cover group-hover:opacity-90 transition-opacity"
                 sizes="33vw"
               />
