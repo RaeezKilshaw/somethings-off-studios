@@ -4,6 +4,7 @@ import ContactForm from '@/app/_components/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Contact - Somethings Off Studio',
+  description: 'Get in touch with Idris Noordien to start a project with Somethings Off Studio.',
 }
 
 export default function ContactPage() {
@@ -25,7 +26,7 @@ export default function ContactPage() {
             className="text-sm hover:opacity-50 transition-opacity"
             style={{ color: 'var(--color-muted)' }}
           >
-            Instagram ↗
+            Instagram ↗︎
           </a>
           <a
             href="https://www.behance.net/idrisnoordien"
@@ -34,7 +35,7 @@ export default function ContactPage() {
             className="text-sm hover:opacity-50 transition-opacity"
             style={{ color: 'var(--color-muted)' }}
           >
-            Behance ↗
+            Behance ↗︎
           </a>
           <a
             href="https://dribbble.com/IdrisNoordien"
@@ -43,7 +44,7 @@ export default function ContactPage() {
             className="text-sm hover:opacity-50 transition-opacity"
             style={{ color: 'var(--color-muted)' }}
           >
-            Dribbble ↗
+            Dribbble ↗︎
           </a>
         </div>
 

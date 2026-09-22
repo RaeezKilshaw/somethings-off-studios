@@ -3,6 +3,8 @@ import TwoColumnPage from '@/app/_components/TwoColumnPage'
 
 export const metadata: Metadata = {
   title: 'About - Somethings Off Studio',
+  description:
+    "I'm Idris, the designer behind Somethings Off Studio - brand identity, art direction, and web work out of Cape Town.",
 }
 
 export default function AboutPage() {

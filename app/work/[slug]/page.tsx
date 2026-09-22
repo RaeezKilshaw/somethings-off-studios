@@ -15,7 +15,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params
   const project = projects.find((p) => p.slug === slug)
   if (!project) return {}
-  return { title: `${project.title} - Somethings Off Studio` }
+  const title = `${project.title} - Somethings Off Studio`
+  return {
+    title,
+    description: project.description,
+    openGraph: {
+      title,
+      description: project.description,
+      images: [{ url: project.cover.src, width: project.cover.width, height: project.cover.height }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: project.description,
+      images: [project.cover.src],
+    },
+  }
 }
 
 export default async function WorkDetailPage({ params }: PageProps) {

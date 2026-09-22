@@ -5,6 +5,7 @@ import { projects } from '@/app/work/_data/projects'
 
 export const metadata: Metadata = {
   title: 'Work - Somethings Off Studio',
+  description: 'Brand identity, art direction, and self-initiated work by Idris Noordien of Somethings Off Studio.',
 }
 
 export default function WorkPage() {
