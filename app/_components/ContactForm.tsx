@@ -46,7 +46,7 @@ export default function ContactForm() {
   const inputClass = 'w-full border-b border-black/20 bg-transparent py-2 text-sm outline-none focus:border-black transition-colors placeholder:text-[var(--color-muted)]'
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 min-w-0">
       <input
         type="text"
         name="name"

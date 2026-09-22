@@ -12,7 +12,7 @@ export default function WorkGallery({ children, gallery, alt }: Props) {
     <div className="flex flex-col lg:flex-row">
       {/* Left column — text. Sticky (not a nested scroll container) so the page
           scrolls normally from anywhere, same as every other page. */}
-      <div className="w-full lg:w-[38%] lg:shrink-0 px-6 pt-40 lg:pt-72 pb-8 lg:pb-16 flex flex-col lg:sticky lg:top-0 lg:h-screen">
+      <div className="w-full min-w-0 lg:w-[38%] lg:shrink-0 px-6 pt-40 lg:pt-72 pb-8 lg:pb-16 flex flex-col lg:sticky lg:top-0 lg:h-screen">
         {children}
       </div>
 

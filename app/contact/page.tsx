@@ -3,13 +3,13 @@ import TwoColumnPage from '@/app/_components/TwoColumnPage'
 import ContactForm from '@/app/_components/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact — Somethings Off Studio',
+  title: 'Contact - Somethings Off Studio',
 }
 
 export default function ContactPage() {
   return (
     <TwoColumnPage imageSrc="/assets/images/contact.jpg" imageAlt="Contact Somethings Off Studio">
-      <div className="flex flex-col gap-8 pt-2 -mt-12 lg:-mt-28">
+      <div className="flex flex-col gap-8 pt-2 -mt-12 lg:-mt-28 min-w-0">
         {/* Links */}
         <div className="flex flex-col gap-2">
           <a

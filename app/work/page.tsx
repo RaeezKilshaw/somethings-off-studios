@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { projects } from '@/app/work/_data/projects'
 
 export const metadata: Metadata = {
-  title: 'Work — Somethings Off Studio',
+  title: 'Work - Somethings Off Studio',
 }
 
 export default function WorkPage() {
@@ -30,7 +30,7 @@ export default function WorkPage() {
             <div className="mt-2">
               <p className="text-sm font-medium">{project.title}</p>
               <p className="text-xs mt-0.5" style={{ color: 'var(--color-muted)' }}>
-                {project.category} — {project.year}
+                {project.category} - {project.year}
               </p>
             </div>
           </Link>

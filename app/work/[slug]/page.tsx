@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params
   const project = projects.find((p) => p.slug === slug)
   if (!project) return {}
-  return { title: `${project.title} — Somethings Off Studio` }
+  return { title: `${project.title} - Somethings Off Studio` }
 }
 
 export default async function WorkDetailPage({ params }: PageProps) {
@@ -24,7 +24,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
   if (!project) notFound()
 
   const textBlock = (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 min-w-0">
       <Link href="/work" className="w-fit hover:opacity-50 transition-opacity" aria-label="Back to Work">
         <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -39,7 +39,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
 
       <div>
         <p className="text-xs mb-1" style={{ color: 'var(--color-muted)' }}>
-          {project.category} — {project.year}
+          {project.category} - {project.year}
         </p>
         <h1 className="text-2xl font-bold leading-tight">{project.title}</h1>
         <p className="text-sm mt-1" style={{ color: 'var(--color-muted)' }}>

@@ -16,7 +16,7 @@ export default function TwoColumnPage({ children, imageSrc, imageAlt, images, ra
   return (
     <div className={`flex flex-col lg:flex-row ${isCarousel ? 'h-screen overflow-hidden' : 'min-h-screen'}`}>
       {/* Left column — content */}
-      <div className="w-full lg:w-[38%] lg:shrink-0 px-6 pt-40 lg:pt-72 pb-8 lg:pb-16 flex flex-col">
+      <div className="w-full min-w-0 lg:w-[38%] lg:shrink-0 px-6 pt-40 lg:pt-72 pb-8 lg:pb-16 flex flex-col">
         {children}
       </div>
 
