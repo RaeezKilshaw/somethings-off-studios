@@ -167,9 +167,9 @@ export const projects: Project[] = [
     category: 'Type Exploration',
     year: '2025',
     description: 'Ongoing typographic experiments made for no one in particular — custom display faces, hand lettering, and layout studies that exist because a phrase wouldn’t leave me alone.',
-    cover: { src: '/assets/images/work/type-work/cover.jpg', width: 750, height: 1124 },
+    cover: { src: '/assets/images/work/type-work/cover.jpg', width: 750, height: 1444 },
     gallery: [
-      { src: '/assets/images/work/type-work/cover.jpg', width: 750, height: 1124 },
+      { src: '/assets/images/work/type-work/cover.jpg', width: 750, height: 1444 },
       { src: '/assets/images/work/type-work/01.jpg', width: 750, height: 750 },
       { src: '/assets/images/work/type-work/02.jpg', width: 750, height: 750 },
       { src: '/assets/images/work/type-work/03.jpg', width: 750, height: 750 },
