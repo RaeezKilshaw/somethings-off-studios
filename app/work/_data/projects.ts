@@ -28,7 +28,7 @@ export const projects: Project[] = [
     client: 'Somethings Off Studio',
     category: 'Poster Series',
     year: '2025',
-    description: 'The studio’s own mark — a bold three-colour wordmark, extended into a "Studio Spaces" editorial poster series.',
+    description: 'The studio’s own mark — a bold three-colour wordmark that spills into "Studio Spaces," a run of type-led posters pairing raw texture with hard graphic shape.',
     cover: { src: '/assets/images/work/sos/cover.jpg', width: 750, height: 1124 },
     gallery: [
       { src: '/assets/images/work/sos/cover.jpg', width: 750, height: 1124 },
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     client: 'Run For Cover Social Running Club',
     category: 'Concept Brand Identity',
     year: '2025',
-    description: 'Identity system for a social running club — angular wordmark, colourways, and merch for kit, signage, and digital.',
+    description: 'Identity system for a social running club, built for movement — an angular wordmark, a tight colourway, and merch that reads at a sprint across kit, signage, and digital.',
     cover: { src: '/assets/images/work/run-for-cover/cover.jpg', width: 750, height: 750 },
     gallery: [
       { src: '/assets/images/work/run-for-cover/cover.jpg', width: 750, height: 750 },
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     client: '786 Foods',
     category: 'Brand Identity',
     year: '2025',
-    description: 'A pot-and-lettering mark for a family food brand established in 1996.',
+    description: 'A pot-and-lettering mark, built stout and legible for a family food brand that’s been trading since 1996.',
     cover: { src: '/assets/images/work/786-foods/cover.jpg', width: 750, height: 1124 },
     gallery: [
       { src: '/assets/images/work/786-foods/cover.jpg', width: 750, height: 1124 },
@@ -77,7 +77,7 @@ export const projects: Project[] = [
     client: 'Velo Coffee Club',
     category: 'Concept Brand Identity',
     year: '2025',
-    description: 'A hand-drawn wordmark and launch-event campaign for a new coffee spot in Plumstead, Cape Town.',
+    description: 'A loose, hand-drawn wordmark and a full launch-day campaign for a new coffee spot in Plumstead, Cape Town — signage, flyers, the whole opening morning.',
     cover: { src: '/assets/images/work/velo-coffee-club/cover.jpg', width: 750, height: 595 },
     gallery: [
       { src: '/assets/images/work/velo-coffee-club/cover.jpg', width: 750, height: 595 },
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     client: 'Self-initiated',
     category: 'Zine',
     year: '2025',
-    description: 'A self-published photo zine documenting the overlooked corners of Abu Dhabi.',
+    description: 'A self-published photo zine, shot and laid out solo — the parts of Abu Dhabi that don’t make the postcards: service roads, half-built lots, the in-between.',
     cover: { src: '/assets/images/work/abu-dhabi-zine/cover.jpg', width: 750, height: 1124 },
     gallery: [
       { src: '/assets/images/work/abu-dhabi-zine/cover.jpg', width: 750, height: 1124 },
@@ -115,7 +115,7 @@ export const projects: Project[] = [
     client: "Auntie Sima's Biltong",
     category: 'Brand Identity',
     year: '2024',
-    description: 'Hand-lettered wordmark and packaging illustration for an artisanal Cape Town biltong brand.',
+    description: 'A hand-lettered wordmark and packaging illustration for an artisanal Cape Town biltong brand — cursive, warm, unmistakably home-made.',
     cover: { src: '/assets/images/work/auntie-simas-biltong/cover.jpg', width: 750, height: 750 },
     gallery: [
       { src: '/assets/images/work/auntie-simas-biltong/cover.jpg', width: 750, height: 750 },
@@ -130,7 +130,7 @@ export const projects: Project[] = [
     client: 'RUNNA Social Running Club',
     category: 'Concept Brand Identity',
     year: '2025',
-    description: 'Identity and campaign poster series for a Cape Town / Johannesburg social running club — a running wordmark and a set of stark, high-contrast editorial posters.',
+    description: 'Identity and campaign posters for a Cape Town / Johannesburg running club — a hard-edged wordmark and a set of stark, high-contrast editorials built to move at pace.',
     cover: { src: '/assets/images/work/runna/cover.jpg', width: 750, height: 1061 },
     gallery: [
       { src: '/assets/images/work/runna/cover.jpg', width: 750, height: 1061 },
@@ -146,7 +146,7 @@ export const projects: Project[] = [
     client: 'Sealand',
     category: 'Illustration',
     year: '2025',
-    description: 'Illustrated botanical mark and surf-inspired identity for the Sealand "Familia" line, applied across totes and boards.',
+    description: 'An illustrated botanical mark for the Sealand "Familia" line — surf culture rendered in flat colour, printed across totes and boards.',
     cover: { src: '/assets/images/work/sealand/cover.jpg', width: 750, height: 595 },
     gallery: [
       { src: '/assets/images/work/sealand/cover.jpg', width: 750, height: 595 },
@@ -166,7 +166,7 @@ export const projects: Project[] = [
     client: 'Self-initiated',
     category: 'Type Exploration',
     year: '2025',
-    description: 'Ongoing typographic experiments — custom display faces, lettering, and layout studies.',
+    description: 'Ongoing typographic experiments made for no one in particular — custom display faces, hand lettering, and layout studies that exist because a phrase wouldn’t leave me alone.',
     cover: { src: '/assets/images/work/type-work/cover.jpg', width: 750, height: 1124 },
     gallery: [
       { src: '/assets/images/work/type-work/cover.jpg', width: 750, height: 1124 },
@@ -188,7 +188,7 @@ export const projects: Project[] = [
     client: 'Sealand',
     category: 'Type Illustration',
     year: '2025',
-    description: 'Apparel line-extension for Sealand — a hand-drawn embrace mark and merch mockups.',
+    description: 'An apparel line-extension for Sealand — a hand-drawn embrace mark, screen-printed onto merch.',
     cover: { src: '/assets/images/work/sealand-crew/cover.jpg', width: 750, height: 595 },
     gallery: [
       { src: '/assets/images/work/sealand-crew/cover.jpg', width: 750, height: 595 },
