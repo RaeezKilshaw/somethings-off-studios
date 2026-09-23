@@ -146,7 +146,7 @@ export const projects: Project[] = [
     client: 'Sealand',
     category: 'Illustration',
     year: '2025',
-    description: 'An illustrated botanical mark for the Sealand "Familia" line - surf culture rendered in flat colour, printed across totes and boards.',
+    description: 'Illustration made for end of year party tote bags.',
     cover: { src: '/assets/images/work/sealand/cover.jpg', width: 750, height: 595 },
     gallery: [
       { src: '/assets/images/work/sealand/cover.jpg', width: 750, height: 595 },
@@ -188,7 +188,7 @@ export const projects: Project[] = [
     client: 'Sealand',
     category: 'Type Illustration',
     year: '2025',
-    description: 'An apparel line-extension for Sealand - a hand-drawn embrace mark, screen-printed onto merch.',
+    description: 'Illustration made for the production team at Sealand factory and dispatch centre.',
     cover: { src: '/assets/images/work/sealand-crew/cover.jpg', width: 750, height: 595 },
     gallery: [
       { src: '/assets/images/work/sealand-crew/cover.jpg', width: 750, height: 595 },
