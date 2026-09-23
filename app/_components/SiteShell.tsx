@@ -53,8 +53,8 @@ export default function SiteShell() {
         style={{ opacity: menuOpen ? 1 : 0 }}
       />
 
-      {/* Logo — full-width white bar on mobile (prevents scroll bleed), transparent on desktop */}
-      <div className="absolute top-0 left-0 right-0 lg:right-auto pointer-events-auto bg-white lg:bg-transparent px-4 py-3 lg:p-6">
+      {/* Logo — transparent at every breakpoint, floats over scrolled content */}
+      <div className="absolute top-0 left-0 right-0 lg:right-auto pointer-events-auto px-4 py-3 lg:p-6">
         <Link
           href="/"
           onClick={() => setMenuOpen(false)}
