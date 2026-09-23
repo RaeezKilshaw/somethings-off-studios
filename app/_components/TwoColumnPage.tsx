@@ -14,7 +14,7 @@ export default function TwoColumnPage({ children, imageSrc, imageAlt, images, ra
   const isCarousel = Boolean(images && images.length > 1)
 
   return (
-    <div className={`flex flex-col lg:flex-row ${isCarousel ? 'h-screen overflow-hidden' : 'min-h-screen'}`}>
+    <div className={`flex flex-col lg:flex-row ${isCarousel ? 'h-dvh overflow-hidden' : 'min-h-screen'}`}>
       {/* Left column — content */}
       <div className="w-full min-w-0 lg:w-[38%] lg:shrink-0 px-6 pt-40 lg:pt-72 pb-8 lg:pb-16 flex flex-col">
         {children}
@@ -22,7 +22,7 @@ export default function TwoColumnPage({ children, imageSrc, imageAlt, images, ra
 
       {/* Right column — image with ample white space. Same box regardless of single image or carousel. */}
       <div
-        className={`flex-1 flex items-center justify-center px-6 pb-16 lg:p-10 ${isCarousel ? 'min-h-0' : 'min-h-[50vh] lg:min-h-0'}`}
+        className={`flex-1 flex items-center justify-center px-6 lg:p-10 ${isCarousel ? 'pb-24 lg:pb-10 min-h-0' : 'pb-16 min-h-[50vh] lg:min-h-0'}`}
       >
         {isCarousel ? (
           <ImageCarousel images={images as WorkImage[]} alt={imageAlt} randomStart={randomStart} />
